@@ -47,7 +47,7 @@
     </div>
   </nav>  
 
-  <header class="masthead text-center text-white">
+  <header class="masthead text-center text-white mb-4">
     <button type="button" class="btn btn-danger btn-lg mb-4 mt-0 d-lg-none" style="width: 100%;">Adicione este site à sua área de trabalho!</button>
     <div class="masthead-content">
       <div class='embed-container d-lg-none'>
@@ -66,12 +66,27 @@
   </header>
 
   <!-- CARDS DAS PERGUNTAS -->
+  <style>
+    @media (min-width:992px){
+      .tituloCarousel{
+        padding-top: 50px; 
+        padding-bottom: 50px;
+      }
+    }
+  </style>
+
+  <style> 
+    .carousel-inner{
+      padding-bottom: 30px;
+    }
+  </style>
+
   <section>
     <div class="container">
       <div class="row">  
         <div class="col-sm-6">  
           <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <h1 class="text-center mb-3 mt-4">Perguntas da semana</h1>
+            <h1 class="text-center mb-3 tituloCarousel">Perguntas da semana</h1>
             <div class="carousel-inner w-100 mx-auto">          
               <div class="carousel-item active">
                 <div class="card">
@@ -126,7 +141,7 @@
         </div>
         <div class="col-sm-6">  
           <div id="myCarousel2" class="carousel slide" data-ride="carousel">
-            <h1 class="text-center mb-3 mt-4">Conteúdo para download</h1>
+            <h1 class="text-center mb-3 tituloCarousel">Conteúdo para download</h1>
             <div class="carousel-inner w-100 mx-auto">          
               <div class="carousel-item active">
                 <div class="card">
