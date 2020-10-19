@@ -253,11 +253,11 @@
             if (e.direction == "left") {
               $(".carousel-item")
                 .eq(i)
-                .appendTo(".carousel-inner");
+                //.appendTo(".carousel-inner");
             } else {
               $(".carousel-item")
                 .eq(0)
-                .appendTo($(this).find(".carousel-inner"));
+                //.appendTo($(this).find(".carousel-inner"));
             }
           }
         }
@@ -266,24 +266,24 @@
   </script>
   <script>
     $(document).ready(function() {
-      $("#myCarousel2").on("slide.bs.carousel", function(e) {
-        var $e = $(e.relatedTarget);
-        var idx = $e.index();
-        var itemsPerSlide = 3;
-        var totalItems = $(".carousel-item").length;
+      $("#myCarousel2").on("slide.bs.carousel", function(c) {
+        var $c = $(c.relatedTarget);
+        var idxc = $c.index();
+        var itemsPerSlide2 = 3;
+        var totalItems2 = $(".carousel-item").length;
 
-        if (idx >= totalItems - (itemsPerSlide - 1)) {
-          var it = itemsPerSlide - (totalItems - idx);
-          for (var i = 0; i < it; i++) {
+        if (idxc >= totalItems2 - (itemsPerSlide2 - 1)) {
+          var it2 = itemsPerSlide2 - (totalItems2 - idxc);
+          for (var i = 0; i < it2; i++) {
             // append slides to end
-            if (e.direction == "left") {
+            if (c.direction == "left") {
               $(".carousel-item")
                 .eq(i)
-                .appendTo(".carousel-inner");
+                //.appendTo(".carousel-inner");
             } else {
               $(".carousel-item")
                 .eq(0)
-                .appendTo($(this).find(".carousel-inner"));
+                //.appendTo($(this).find(".carousel-inner"));
             }
           }
         }
