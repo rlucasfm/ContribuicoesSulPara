@@ -21,6 +21,20 @@
   <!-- CSS -->
   <link href="assets/css/one-page-wonder.min.css" rel="stylesheet">
 
+  <!-- Onesignal Push -->
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+  <script>
+    window.OneSignal = window.OneSignal || [];
+    OneSignal.push(function() {
+      OneSignal.init({
+        appId: "9fa2646e-9b6e-47ba-9ac0-294eadc09e23",
+        notifyButton: {
+          enable: true,
+        },
+      });
+      OneSignal.showNativePrompt();
+    });
+  </script>
 
   <style>
     .embed-container { 
