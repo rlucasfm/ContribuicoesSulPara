@@ -21,6 +21,38 @@
   <!-- CSS -->
   <link href="assets/css/one-page-wonder.min.css" rel="stylesheet">
 
+  <!-- Onesignal Push -->
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+  <script>
+    window.OneSignal = window.OneSignal || [];
+    OneSignal.push(function() {
+      OneSignal.init({
+        appId: "9fa2646e-9b6e-47ba-9ac0-294eadc09e23",
+        notifyButton: {
+          enable: true,
+          text: {
+                  'tip.state.unsubscribed': 'Se inscreva para saber dos próximos eventos',
+                  'tip.state.subscribed': "Você está inscrito, e receberá as próximas notificações!",
+                  'tip.state.blocked': "Você bloqueou as notificações",
+                  'message.prenotify': 'Quer ficar atualizado sobre eventos da região?',
+                  'message.action.subscribed': "Obrigado por inscrever-se!",
+                  'message.action.resubscribed': "Você foi reinscrito",
+                  'message.action.unsubscribed': "Você não será notificado novamente",
+                  'dialog.main.title': 'Notificações da Região',
+                  'dialog.main.button.subscribe': 'Quero!',
+                  'dialog.main.button.unsubscribe': 'Não quero',
+                  'dialog.blocked.title': 'Desbloqueie as notificações',
+                  'dialog.blocked.message': "Faça isto para desbloquear as notificações:"
+              }
+        },
+        welcomeNotification: {
+          title: "Reunião Sul Pará",
+          message: "Obrigado por se inscrever!"
+        }
+      });
+      OneSignal.showNativePrompt();
+    });
+  </script>
 
   <style>
     .embed-container { 
